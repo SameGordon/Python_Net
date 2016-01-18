@@ -1,0 +1,9 @@
+- my name
+- my pet
+- 150
+- 22
+- hostname: router
+  ip_addr: 1.1.1.1
+  vendor: cisco
+- new school
+- old school

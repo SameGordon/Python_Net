@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+'''
+Program to create a list containing different values. This list will
+then be written to a file using both YAML and JSON.
+'''
+
+##Modules needed to run program##
+import yaml
+import json
+##End of import##
+
+def convert():
+
+	yml_file = 'list.yml'
+	json_file = 'list.json'
+
+	new_dict = {'hostname': 'router', 'ip_addr': '1.1.1.1', 'vendor': 'cisco'}
+
+	new_list = ['my name','my pet', 150, 22, new_dict, 'new school', 'old school']
+
+	with open(yml_file, "w") as f:
+		f.write(yaml.dump(new_list, default_flow_style=False))
+
+	with open(json_file, "w") as f:
+		json.dump(new_list, f)
+
+
+if __name__ == "__main__":
+    convert()
+
+
+
+
+
